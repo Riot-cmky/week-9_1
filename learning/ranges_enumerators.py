@@ -5,17 +5,21 @@
 # Range Practice #1
 # Create a list consisting of all the numbers from 2500 to 2585 (inclusive). Store this list in the variable my_list.
 
-
+my_list = list(range(2500, 2586))
+print(my_list)
 
 # Range Practice #2
 # Using the range() function, create in a single line of code a list consisting of all numbers that are multiples of 3 from 3 to 300 (inclusive). Store this list in the variable my_list.
 
+my_list = list(range(3, 301, 3))
+print(my_list)
 
 
 # Range Practice #3
 # Use the range() function and a loop to add the squares of all the numbers from 1 to 15 (inclusive). Store the result in a variable called sum_squares.
 
-
+sum_squares = sum([x**2 for x in range(1, 16)])
+print(sum_squares)
 
 # For this purpose:
 
@@ -29,6 +33,10 @@
 
 ##############################enumerators in python #####################################################
 
+list_names = ["Alice", "Bob", "Charlie"]
+
+for index, name in enumerate(list_names):
+    print(f"{name} is at index {index}")
 
 # Enumerator Practice #1
 # Print sentences like the following on the screen:
@@ -43,9 +51,10 @@
 
 # Tip: use loops!
 
-# list_names = ["Steven", "Jackie", "Donna", "Kelso", "Eric", "Fez", "Kitty", "Red"]
+list_names = ["Steven", "Jackie", "Donna", "Kelso", "Eric", "Fez", "Kitty", "Red"]
 
-# print(f'{nombre} se encuentra en el índice {indice}')
+for index, name in enumerate(list_names):
+    print(f'{name} is found at index {index}')
 
 
 
@@ -56,6 +65,8 @@
 
 # "Python"
 
+indices_list = list(enumerate("Python"))
+print(indices_list)
 
 # Enumerator Practice #3
 # Print to the screen only the indices of those names in the list below, that start with M:
@@ -72,9 +83,11 @@
 
 # string methods and indexing
 
-# list_names = ["Maverick", "Alice", "Madeline", "Hazel", "Jack", "Meadow", "Thomas", "Emily", "Mills"]
+list_names = ["Maverick", "Alice", "Madeline", "Hazel", "Jack", "Meadow", "Thomas", "Emily", "Mills"]
 
-
+for index, name in enumerate(list_names):
+    if name.startwith("M"):
+        print(index)
 
 #######################ranges challenge#####################
 # Challenge: Create a list of all numbers from 10 to 100 that are divisible by both 4 and 6.
